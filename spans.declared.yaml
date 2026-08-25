@@ -1,0 +1,13 @@
+# The declared span topology. This file IS the contract the span_topology gate
+# enforces: every span named here must exist in the code, and no span may be
+# emitted that is not named here.
+#
+# Adding a span means editing this file, which means a review.
+spans:
+  - refund.validate
+  - refund.check_duplicate
+  - refund.issue
+  - refund.audit
+metrics:
+  - refund_issued_total
+  - refund_refused_total

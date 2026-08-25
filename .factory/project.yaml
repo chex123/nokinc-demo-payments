@@ -1,0 +1,12 @@
+factory_version: 1
+product: nokinc-demo-payments
+repository: nokinc-demo-payments
+service:
+  type: assured_microservice
+  language: python
+assurance:
+  required: true
+  declared_spans: spans.declared.yaml
+alm: {provider: github, repo: nokinc/nokinc-demo-payments}
+changeset_role: backend
+deploy_order: 1        # after infra (0), before sdk (2)

@@ -1,0 +1,9 @@
+# Gate NAMES are universal. These are this repo's implementations.
+language: python
+commands:
+  build:      "python -m compileall src"
+  unit:       "pytest tests/unit -q"
+  acceptance: "pytest tests/acceptance -q"
+  types:      "mypy --strict src"
+  coverage:   "pytest --cov=src --cov-report=xml -q"
+# mutation and contract intentionally absent -> NOT_AVAILABLE, never PASS
