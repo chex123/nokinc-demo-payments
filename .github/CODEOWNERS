@@ -1,2 +1,4 @@
-/tests/acceptance/ @testuser
-/.github/ @testuser
+/tests/acceptance/ @chex123
+/tests/contract/ @chex123
+/tests/regression/ @chex123
+/.github/ @chex123
