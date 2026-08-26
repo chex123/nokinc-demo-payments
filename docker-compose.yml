@@ -1,6 +1,7 @@
 # Minimal observability for the demo. Two containers, no cluster.
+# Copy .env.example to .env and set a local-only PostgreSQL password before
+# running podman compose up -d. Never commit .env.
 #   Podman: podman compose up -d
-#   Docker alternative: docker compose up -d
 #   OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318 uvicorn payments.main:app
 #   open http://localhost:16686        <- the closing shot
 services:
@@ -11,7 +12,8 @@ services:
 
   postgres:
     image: docker.io/library/postgres:16-alpine
+    env_file:
+      - .env
     environment:
-      POSTGRES_PASSWORD: demo
       POSTGRES_DB: payments
     ports: ["5432:5432"]
