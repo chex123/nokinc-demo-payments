@@ -1,4 +1,4 @@
-/tests/acceptance/ @chex123
-/tests/contract/ @chex123
-/tests/regression/ @chex123
-/.github/ @chex123
+/tests/acceptance/ @chex123 @triplexapps
+/tests/contract/ @chex123 @triplexapps
+/tests/regression/ @chex123 @triplexapps
+/.github/ @chex123 @triplexapps
